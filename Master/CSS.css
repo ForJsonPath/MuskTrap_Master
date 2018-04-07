@@ -1,0 +1,63 @@
+html, body {
+	height:100%;
+	width:auto;
+}	
+body {
+    background-image: url(Assets/Images/MartianLookingAPlanet.svg);
+    background-size: cover;	
+	background-repeat: no-repeat;
+	background-position: center;    
+    margin: 0 auto;
+}
+
+.elonmartian {
+	font-family: "elonmartian";
+	font-size:36pt;
+	color: rgba(255,255,255,0.7);	
+}
+
+@font-face {
+    font-family: "elonmartian";
+    src: url(Fonts/Spac3_neon.ttf) format("truetype");
+}
+
+.glow {
+    text-shadow: -2px -2px 5px #00B2EE, 2px 2px 5px #00B2EE, 4px 4px 5px #00B2EE, -4px -4px 5px #00B2EE;  
+}
+
+.hoverglow:hover {
+    transition:.5s;
+    font-size:64pt;
+    text-shadow: -2px -2px 5px #bf7fbf, 2px 2px 5px #bf7fbf, 4px 4px 5px #bf7fbf, -4px -4px 5px #bf7fbf,-6px -6px 5px #bf7fbf, 6px 6px 5px #bf7fbf;  
+}
+
+.pulse {
+	height: 2em;
+	width: 2em;
+    animation-name: pulse_thinger;
+    animation-duration: 10000ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse_thinger {
+    0% { transform: scale(0); }	    
+	50% { transform: scale(3);}
+    100% { transform: scale(0); }	
+}
+
+.pulse_musk:hover {
+	font-size="36em";
+    animation-name: pulse_trap;
+    animation-duration: 10ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse_trap {
+    0% { transform: scale(1); }	    
+	50% { transform: scale(1.002);}
+    100% { transform: scale(1); }	
+}

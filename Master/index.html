@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>		
+	<head>
+		<link rel="stylesheet" href="CSS.css" />		
+		<title>Page Title</title>	
+		<script type="text/javascript">
+			function playBackgroundAudio(){
+				var audio = document.getElementById('backgroundAudio');
+				audio.volume = 0.2;
+				if(audio.paused){
+					audio.play();
+					}else{
+					audio.pause();
+					}
+			}
+			
+			function playNeon(){
+				var buzz = document.getElementById('muskTrapHover');
+				buzz.play();
+			}
+			
+			function stopNeon(){
+				var buzz = document.getElementById('muskTrapHover');
+				buzz.pause();
+				buzz.currentTime = 0;
+			}			
+		</script>		
+	</head>
+	<body>				
+		<div>
+			<audio id="backgroundAudio" loop>
+				<source src="Assets/Audio/80synth.wav" type="audio/wav"/>
+			</audio>
+			<audio id="muskTrapHover" loop>
+				<source src="Assets/Audio/LightTrap.MP3" type="audio/MP3"/>
+			</audio>
+			<div style="text-align: center; margin-top: .7em; width: auto;">
+				<h1 id="muskTrap" onmouseover="playNeon()" onmouseout="stopNeon()" class="elonmartian glow hoverglow pulse_musk">musk trap</h1>						
+			</div>		
+			<div>						
+				<a href="#" id="mute" onclick="playBackgroundAudio();">				
+					<img style="padding-left:2em;" class="pulse" src="Assets/Images/PinkButton.svg"/>
+				</a>			
+			</div>		
+		</div>
+	</body>
+</html>
