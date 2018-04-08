@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>		
 	<head>
-		<link rel="stylesheet" href="CSS.css" />		
+		<link rel="stylesheet" href="CSS_Main.css" />	
+		<link rel="stylesheet" href="particleAmimations.css" />	
 		<title>Page Title</title>	
 		<script type="text/javascript">
 			function playBackgroundAudio(){
-				var audio = document.getElementById('backgroundAudio');
-				audio.volume = 0.1;
-				if(audio.paused){
-					audio.play();
+				var bgsound = document.getElementById('backgroundAudio');
+				bgsound.volume = 0.1;
+				if(bgsound.paused){
+					bgsound.play();
 					}else{
-					audio.pause();
+					bgsound.pause();
+					bgsound.currentTime = 0;
 					}
 			}
 			
@@ -24,12 +26,14 @@
 				var buzz = document.getElementById('muskTrapHover');
 				buzz.pause();
 				buzz.currentTime = 0;
-			}			
+			}	
 		</script>		
 	</head>
 	<body>					
 		<div>					
-			<p class="p p-1"/>			
+			<p class="p p-1"/>
+			<p class="p3 p3-1"/>
+			<p class="p4 p4-1"/>
 			<audio id="backgroundAudio" loop>
 				<source src="Assets/Audio/80synth.wav" type="audio/wav"/>
 			</audio>
@@ -37,14 +41,49 @@
 				<source src="Assets/Audio/LightTrap.MP3" type="audio/MP3"/>
 			</audio>
 			<div style="text-align: center; margin-top: .7em; width: auto;">
-				<h1 id="muskTrap" onmouseover="playNeon()" onmouseout="stopNeon()" class="elonmartian glow hoverglow pulse_musk">musk trap</h1>						
-			</div>		
-			<div>						
-				<a href="#" id="mute" onclick="playBackgroundAudio();">				
-					<img style="padding-left:2em;" class="pulse" src="Assets/Images/PinkButton.svg"/>
-				</a>			
-			</div>		
-			<p class="pv2 pv2-1"/>
+				<h1>					
+					<div>
+						<span	id="muskTrap" 								
+								onmouseover="playNeon()" onmouseout="stopNeon()"
+								class="elonmartian glow hoverglow pulse_musk" 
+								style="width:1%; text-align:nowrap;">
+								musk trap
+						</span>
+					</div>
+				</h1>	
+			</div>
+			<!-- <div style="text-align: center; margin-top: .7em; width: auto;"> -->
+				<!-- <h1 id="muskTrap" onmouseover="playNeon()" onmouseout="stopNeon()" class="elonmartian glow hoverglow pulse_musk">musk trap</h1>						 -->
+			<!-- </div>		 -->
+			<div class="leftnav">
+				<div>
+				<div>						
+					<a href="#" id="mute" onclick="playBackgroundAudio();">				
+						<img style="padding-left:2em;" class="pulse" src="Assets/Images/PinkButton.svg"/>
+					</a>			
+				</div>		
+				<p class="pv2 pv2-1"/>
+				</div>		
+				<p class="digital_tech" style="padding-left:1em;">
+					<b>		
+						<a class="link" href="Musk_Main.html">
+							<span id="leftnavfirst" class="little_glow">elon musk</span>					
+						</a>
+						</br>
+						</br>
+						<span class="little_glow">genius inventor</span>
+						</br>
+						</br>
+						<span class="little_glow">captain of industry</span>
+						</br>
+						</br>
+						<span class="little_glow">commander of the human race</span>
+						</br>
+						</br>
+						<span class="little_glow">in the war against AI</span>
+					</b>
+				</p>
+			</div>
 		</div>
 	</body>
 </html>
