@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			function playBackgroundAudio(){
 				var audio = document.getElementById('backgroundAudio');
-				audio.volume = 0.2;
+				audio.volume = 0.1;
 				if(audio.paused){
 					audio.play();
 					}else{
@@ -16,7 +16,7 @@
 			
 			function playNeon(){
 				var buzz = document.getElementById('muskTrapHover');
-				buzz.voluem = 0.3;
+				buzz.volume = 0.3;
 				buzz.play();
 			}
 			
@@ -27,20 +27,9 @@
 			}			
 		</script>		
 	</head>
-	<body>		
-		<div>
-			<p class="p p-1"/>
-			<p class="p p-2"/>
-			<p class="p p-3"/>
-			<!--<p class="p p-4"/>
-			<p class="p p-5"/>
-			<p class="p p-6"/>
-			<p class="p p-7"/>
-			<p class="p p-8"/>
-			<p class="p p-9"/>
-			<p class="p p-10"/>-->
-		</div>
-		<div>
+	<body>					
+		<div>					
+			<p class="p p-1"/>			
 			<audio id="backgroundAudio" loop>
 				<source src="Assets/Audio/80synth.wav" type="audio/wav"/>
 			</audio>
@@ -55,6 +44,7 @@
 					<img style="padding-left:2em;" class="pulse" src="Assets/Images/PinkButton.svg"/>
 				</a>			
 			</div>		
+			<p class="pv2 pv2-1"/>
 		</div>
 	</body>
 </html>
